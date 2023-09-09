@@ -12,7 +12,6 @@ class Helper {
 
     public static function requireDotenv() {
         $dir = self::getDir();
-        require_once $dir . '/vendor/autoload.php';
 
         // Carga la ruta del archivo .env
         $dotenv = Dotenv::createImmutable($dir);
