@@ -1,5 +1,21 @@
 {
+    "name": "mhenriquez/api-rest-php-exchange",
+    "description": "API REST con vanilla PHP para calcular los cambios del dolar respecto al bolivar",
+    "type": "project",
     "require": {
         "vlucas/phpdotenv": "^5.5"
-    }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Manuel Henriquez",
+            "email": "manuelhm1993@gmail.com"
+        }
+    ],
+    "minimun-stability": "dev"
 }
