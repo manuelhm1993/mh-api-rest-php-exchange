@@ -32,9 +32,9 @@ const render = (data) => {
                 // Formatear la fecha a timezone Venezuela y formato: dd/mm/yyyy
                 const fecha = new Date(registro[keys[i]]);
                 const options = {
-                    year:  'numeric',
-                    month: 'numeric',
-                    day:   'numeric',
+                    year:  'numeric', // numeric - short - long
+                    month: '2-digit', // numeric - 2-digit - short - long
+                    day:   '2-digit', // numeric - 2-digit
                 };
 
                 // Con un solo bucle se corresponden los spans con los campos de la tabla
