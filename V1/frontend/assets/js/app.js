@@ -28,8 +28,22 @@ const render = (data) => {
         const keys = Object.keys(registro);
 
         spans.forEach((span, i) => {
-            // Con un solo bucle se corresponden los spans con los campos de la tabla
-            span.textContent = registro[keys[i]];
+            if(keys[i] === 'fecha') {
+                // Formatear la fecha a timezone Venezuela y formato: dd/mm/yyyy
+                const fecha = new Date(registro[keys[i]]);
+                const options = {
+                    year:  'numeric',
+                    month: 'numeric',
+                    day:   'numeric',
+                };
+
+                // Con un solo bucle se corresponden los spans con los campos de la tabla
+                span.textContent = fecha.toLocaleDateString('es-ve', options);
+            }
+            else {
+                // Con un solo bucle se corresponden los spans con los campos de la tabla
+                span.textContent = registro[keys[i]];
+            }
         });
 
         fragment.appendChild(clone);
