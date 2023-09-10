@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace App\Controllers;
 
-class Conversor {
+class ConversorController {
     public static function getConversion($from, $to, $amount = null) {
         $data = [$from => ($amount * 10), $to => ($amount * 12)];
 

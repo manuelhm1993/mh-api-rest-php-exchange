@@ -18,5 +18,13 @@ const render = (data) => {
 };
 
 document.addEventListener('DOMContentLoaded', (e) => {
-    fetchAPI('http://localhost/cursos/API-API-REST/PHP/mh-api-rest-php-exchange/backend/index.php');
+    const url    = 'http://localhost/cursos/API-API-REST/PHP/mh-api-rest-php-exchange/V2/backend/index.php';
+    const action = 'conversion';
+    const from   = 'dolar';
+    const to     = 'euro';
+    const amount = 1;
+
+    console.log(url + '?action=' + action + '&from=' + from + '&to=' + to + '&amount=' + amount);
+
+    fetchAPI(url + '?action=' + action + '&from=' + from + '&to=' + to + '&amount=' + amount);
 });
