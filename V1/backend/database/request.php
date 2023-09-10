@@ -19,6 +19,7 @@ $selectDivisa = function(string $request) use ($link, $user, $password, $cerrarC
         $cerrarConexiones($pdo, $stm);
     }
 
+    // Forma de devolver un JSON con vanilla php
     echo json_encode($result);
 };
 
