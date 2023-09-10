@@ -1,0 +1,8 @@
+# Comparte los enlaces
+Options +FollowSymLinks
+
+# Reescribir la url
+RewriteEngine On
+
+# Redirigir la url específica
+RewriteRule ^([a-zA-Z0-9]*)$ http://localhost/Cursos/API-API-REST/PHP/mh-api-rest-php-exchange/V1/backend/datos.php?divisa=$1 [R=301,L]
